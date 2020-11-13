@@ -1,14 +1,21 @@
 package main
 
-// staic
+// anonymous variable
 
 func main() {
 	demo3()
 }
 
 func demo3() {
-	var S1 = 1
-	S1 = 3
-	print(S1)
+	// s1, s2 := fanhui()
+	// println("s1 is ", s1)
+	// println("s2 is ", s2)
+	s1, _ := fanhui()
+	println("s1 is ", s1)
+
 	print("demo3!!!")
+}
+
+func fanhui() (string, string) {
+	return "返回到变量", "返回到匿名变量"
 }
