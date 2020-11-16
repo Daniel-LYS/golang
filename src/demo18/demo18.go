@@ -28,11 +28,24 @@ func demo18() {
 
 	// 遍历
 	for i1, v1 := range a2 {
-		fmt.Println(i1,v1)
-		for i2,v2:=range v1{
-			fmt.Println(i2,v2)
+		fmt.Println(i1, v1)
+		for i2, v2 := range v1 {
+			fmt.Println(i2, v2)
 		}
 	}
+	// 整理
+	for i1, v1 := range a2 {
+		for _, v2 := range v1 {
+			fmt.Printf("[%d %d] ", i1, v2)
+		}
+		fmt.Printf("\n")
+	}
+
+	// 数组是值类型 一个变量的值复制到另一个变量 之后两个变量不会互相影响（相对引用类型）
+	a3 := [3]int{1, 2, 3}
+	a4 := a3
+	a3[0] = 100
+	fmt.Println(a3, a4)
 
 	print("demo18!!!")
 }
